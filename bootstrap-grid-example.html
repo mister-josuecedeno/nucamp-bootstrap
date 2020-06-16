@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+
+    <style>
+      /* container-fluid will wrap */
+      .container {
+        border: solid blue;
+      }
+      .row {
+        border: solid orange;
+      }
+
+      .row div {
+        border: solid lightgreen;
+      }
+    </style>
+
+    <title>Bootstrap Grid Example</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- 1 out of 12 -->
+      <div class="row">
+        <div class="col">
+          1
+        </div>
+      </div>
+
+      <!-- auto | 6 out of 12 | auto -->
+      <div class="row">
+        <div class="col">auto</div>
+        <div class="col-6">6</div>
+        <div class="col">auto</div>
+      </div>
+
+      <!-- multiple specific out of 12 -->
+      <div class="row">
+        <div class="col-4">4</div>
+        <div class="col-6">6</div>
+        <div class="col-2">2</div>
+      </div>
+
+      <!-- 4 out of 12 AND 8 out of 12 OR auto -->
+      <div class="row">
+        <div class="col-4">4</div>
+      </div>
+      <div class="row">
+        <div class="col-8">8</div>
+        <!-- <div class="col">8</div> -->
+      </div>
+
+      <div class="row">
+        <div class="col">1</div>
+        <div class="col">2</div>
+        <div class="col">3</div>
+        <div class="col">4</div>
+        <div class="col">5</div>
+        <div class="col">6</div>
+        <div class="col">7</div>
+        <div class="col">8</div>
+        <div class="col">9</div>
+        <div class="col">10</div>
+        <div class="col">11</div>
+        <div class="col">12</div>
+      </div>
+    </div>
+  </body>
+</html>
