@@ -44,9 +44,17 @@
             <h1>NuCamp</h1>
             <h2>a better way to camp</h2>
           </div>
-          <!-- Task 3 -->
+
           <div class="col col-md-4 col-xl-2 align-self-center">
-            <a class="btn btn-info btn-lg mt-4" href="#reserveForm"
+            <!-- add tooltip (jQuery to activate at bottom of page) -->
+            <a
+              class="btn btn-info btn-lg mt-4"
+              href="#reserveForm"
+              role="button"
+              data-toggle="tooltip"
+              data-placement="bottom"
+              data-html="true"
+              title="Or call us at <br/><strong>1-206-555-1234</strong>"
               >Reserve Campsite</a
             >
           </div>
@@ -120,16 +128,13 @@
       </div>
     </div>
 
-    <!-- TASK 1 -->
     <div class="container">
       <div class="row row-content align-items-center">
         <div class="col-sm-4 col-md-3">
           <h2>Featured Campsites</h2>
         </div>
         <div class="col">
-          <!-- Task 1: Add media class -->
           <div class="media">
-            <!-- Task 1: Add media body -->
             <div class="media-body align-self-center">
               <h3>React Lake Campground</h3>
               <p class="d-none d-sm-block">
@@ -139,7 +144,6 @@
               </p>
             </div>
 
-            <!-- Task 1: Add Image (class="img-thumbnail d-flex ml-3") -->
             <img
               class="img-thumbnail d-flex ml-3"
               src="./img/react-lake-thumb.jpg"
@@ -150,7 +154,6 @@
       </div>
     </div>
 
-    <!-- Bootstrap Outfitters Container -->
     <div class="container">
       <div class="row row-content align-items-center">
         <div class="col-sm-4 order-sm-last col-md-3">
@@ -176,24 +179,16 @@
       </div>
     </div>
 
-    <!-- Card Form Container -->
     <div class="container">
-      <!-- TASK 2 -->
-      <!-- Something is wrong with the card sizing -->
-      <!-- Task 2: add row and col -->
       <div class="row row-content align-items-center">
         <div class="col-xl-6 col-lg-7 col-md-9 mx-auto">
           <div class="card">
-            <!-- Task 2: bg color and font color -->
             <h3 class="card-header bg-info text-white">
               Reserve a Campsite
             </h3>
             <div class="card-body">
-              <!-- Task 2: Add a form -->
               <form action="" id="reserveForm">
-                <!-- Task 2: Row 1 -->
                 <div class="row form-group">
-                  <!-- Task 2: add col classes to the label (refer to contactus) -->
                   <label class="col-sm-6 col-form-label" for="numCampers"
                     >Number of Campers</label
                   >
@@ -213,7 +208,7 @@
                     </select>
                   </div>
                 </div>
-                <!-- Task 2: Second Row -->
+
                 <div class="row form-group">
                   <label class="col-sm-6 col-form-label" for="date">Date</label>
                   <div class="col">
@@ -226,7 +221,7 @@
                     />
                   </div>
                 </div>
-                <!-- Task 2: Third Row -->
+
                 <div class="row form-group">
                   <div class="col">
                     <button class="btn btn-primary" type="submit">
@@ -301,5 +296,11 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script>
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+    </script>
   </body>
 </html>
