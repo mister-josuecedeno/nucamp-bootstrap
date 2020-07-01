@@ -45,3 +45,12 @@ header h2 {
 .carousel {
   border: solid #5637dd;
 }
+
+.navbar-text {
+  display: block;
+}
+
+.navbar-text a {
+  cursor: pointer;
+  display: block;
+}
