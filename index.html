@@ -46,8 +46,11 @@
           </div>
 
           <div class="col col-md-4 col-xl-2 align-self-center">
-            <!-- add tooltip (jQuery to activate at bottom of page) -->
-            <a
+            <!-- (Flagged to be REMOVED) add tooltip (jQuery to activate at bottom of page) -->
+
+            <!-- Task 1 - REMOVE tooltip attributes to be replaced with modal -->
+
+            <!-- <a
               class="btn btn-info btn-lg mt-4"
               href="#reserveForm"
               role="button"
@@ -56,10 +59,131 @@
               data-html="true"
               title="Or call us at <br/><strong>1-206-555-1234</strong>"
               >Reserve Campsite</a
+            > -->
+            <!-- Modal example
+            <a
+              class="nav-link"
+              href="#"
+              role="button"
+              data-toggle="modal"
+              data-target="#loginModal"
+              ><i class="fa fa-sign-in"></i> Login</a
+            > -->
+
+            <!-- Trigger reserveModal -->
+            <a
+              class="btn btn-info btn-lg mt-4"
+              role="button"
+              data-toggle="modal"
+              data-target="#reserveModal"
+              >Reserve Campsite</a
             >
           </div>
         </div>
       </div>
+
+      <!-- Task 2 - ADD Modal for Reserve Campsite -->
+
+      <div id="reserveModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header bg-info">
+              <h3 class="modal-title">Reserve a Campsite</h3>
+              <button type="button" class="close" data-dismiss="modal">
+                &times;
+              </button>
+            </div>
+            <div class="modal-body text-dark">
+              <div class="container-fluid">
+                <form action="" id="reserveForm">
+                  <div class="row form-group">
+                    <label class="col-sm-6 col-form-label" for="numCampers"
+                      >Number of Campers</label
+                    >
+                    <div class="col">
+                      <select
+                        class="form-control"
+                        name="numCampers"
+                        id="numCampers"
+                      >
+                        <option value="">Select...</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="row form-group">
+                    <label class="col-sm-6 col-form-label" for="date"
+                      >Date</label
+                    >
+                    <div class="col">
+                      <input
+                        class="form-control"
+                        type="date"
+                        id="date"
+                        name="date"
+                        placeholder="date"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Task 3 - ADDing RADIO buttons -->
+                  <div class="row form-group">
+                    <label class="col-sm-6 col-form-label" for="date"
+                      >Campsite Type</label
+                    >
+
+                    <div
+                      class="btn-group btn-group-toggle col"
+                      data-toggle="buttons"
+                    >
+                      <label class="btn btn-success active">
+                        <input
+                          type="radio"
+                          name="siteType"
+                          id="siteTent"
+                          autocomplete="off"
+                          checked
+                          value="tent"
+                        />
+                        Tent
+                      </label>
+                      <label class="btn btn-primary">
+                        <input
+                          type="radio"
+                          name="siteType"
+                          id="siteRV"
+                          autocomplete="off"
+                          value="RV"
+                        />
+                        RV
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="row form-group">
+                    <div class="col">
+                      <button class="btn btn-secondary" data-dismiss="modal">
+                        Cancel
+                      </button>
+                      <button class="btn btn-primary" type="submit">
+                        Search
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- END ADD Modal for Reserve Campsite -->
     </header>
 
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
@@ -129,7 +253,7 @@
       </div>
     </nav>
 
-    <!-- Start Modal -->
+    <!-- Start LOGIN Modal -->
 
     <div id="loginModal" class="modal fade" role="dialog">
       <div class="modal-dialog" role="document">
@@ -359,6 +483,7 @@
       </div>
     </div>
 
+    <!-- Task 2 - REMOVE to be replaced by modal-lg
     <div class="container">
       <div class="row row-content align-items-center">
         <div class="col-xl-6 col-lg-7 col-md-9 mx-auto">
@@ -414,7 +539,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <footer class="site-footer">
       <div class="container">
@@ -477,10 +602,11 @@
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
+    <!-- DELETE - tooltip will be replaced with modal
     <script>
       $(function () {
         $('[data-toggle="tooltip"]').tooltip();
       });
-    </script>
+    </script> -->
   </body>
 </html>
