@@ -46,13 +46,8 @@ header h2 {
   border: solid #5637dd;
 }
 
-/* DELETE LATER ...
-
-.navbar-text {
-  display: block;
+#carouselButton {
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
-
-.navbar-text a {
-  cursor: pointer;
-  display: block;
-} */

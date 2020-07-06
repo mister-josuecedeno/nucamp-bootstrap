@@ -46,31 +46,6 @@
           </div>
 
           <div class="col col-md-4 col-xl-2 align-self-center">
-            <!-- (Flagged to be REMOVED) add tooltip (jQuery to activate at bottom of page) -->
-
-            <!-- Task 1 - REMOVE tooltip attributes to be replaced with modal -->
-
-            <!-- <a
-              class="btn btn-info btn-lg mt-4"
-              href="#reserveForm"
-              role="button"
-              data-toggle="tooltip"
-              data-placement="bottom"
-              data-html="true"
-              title="Or call us at <br/><strong>1-206-555-1234</strong>"
-              >Reserve Campsite</a
-            > -->
-            <!-- Modal example
-            <a
-              class="nav-link"
-              href="#"
-              role="button"
-              data-toggle="modal"
-              data-target="#loginModal"
-              ><i class="fa fa-sign-in"></i> Login</a
-            > -->
-
-            <!-- Trigger reserveModal -->
             <a
               class="btn btn-info btn-lg mt-4"
               role="button"
@@ -81,8 +56,6 @@
           </div>
         </div>
       </div>
-
-      <!-- Task 2 - ADD Modal for Reserve Campsite -->
 
       <div id="reserveModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="document">
@@ -132,7 +105,6 @@
                     </div>
                   </div>
 
-                  <!-- Task 3 - ADDing RADIO buttons -->
                   <div class="row form-group">
                     <label class="col-sm-6 col-form-label" for="date"
                       >Campsite Type</label
@@ -182,8 +154,6 @@
           </div>
         </div>
       </div>
-
-      <!-- END ADD Modal for Reserve Campsite -->
     </header>
 
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
@@ -224,7 +194,6 @@
             </li>
           </ul>
 
-          <!-- Modal Login -->
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
               <a
@@ -237,23 +206,9 @@
               >
             </li>
           </ul>
-
-          <!-- DELETE LATER ... Question - the login link doesn't hover -->
-          <!-- <span class="navbar-text ml-auto">
-            <a
-              class="navbar-text-link"
-              role="button"
-              data-toggle="modal"
-              data-target="#loginModal"
-            >
-              <i class="fa fa-sign-in"></i> Login
-            </a>
-          </span> -->
         </div>
       </div>
     </nav>
-
-    <!-- Start LOGIN Modal -->
 
     <div id="loginModal" class="modal fade" role="dialog">
       <div class="modal-dialog" role="document">
@@ -313,8 +268,6 @@
         </div>
       </div>
     </div>
-
-    <!-- End Modal -->
 
     <!-- Main Page Content -->
     <div class="container">
@@ -404,6 +357,16 @@
               <span class="carousel-control-next-icon"> </span>
               <span class="sr-only">Next</span>
             </a>
+
+            <!-- carousel button controls -->
+            <div class="btn-group" id="carouselButton">
+              <button class="btn btn-danger btn-sm" id="carouselPause">
+                <i class="fa fa-pause"> </i>
+              </button>
+              <button class="btn btn-danger btn-sm" id="carouselPlay">
+                <i class="fa fa-play"> </i>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -483,64 +446,6 @@
       </div>
     </div>
 
-    <!-- Task 2 - REMOVE to be replaced by modal-lg
-    <div class="container">
-      <div class="row row-content align-items-center">
-        <div class="col-xl-6 col-lg-7 col-md-9 mx-auto">
-          <div class="card">
-            <h3 class="card-header bg-info text-white">
-              Reserve a Campsite
-            </h3>
-            <div class="card-body">
-              <form action="" id="reserveForm">
-                <div class="row form-group">
-                  <label class="col-sm-6 col-form-label" for="numCampers"
-                    >Number of Campers</label
-                  >
-                  <div class="col">
-                    <select
-                      class="form-control"
-                      name="numCampers"
-                      id="numCampers"
-                    >
-                      <option value="">Select...</option>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-                      <option value="6">6</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="row form-group">
-                  <label class="col-sm-6 col-form-label" for="date">Date</label>
-                  <div class="col">
-                    <input
-                      class="form-control"
-                      type="date"
-                      id="date"
-                      name="date"
-                      placeholder="date"
-                    />
-                  </div>
-                </div>
-
-                <div class="row form-group">
-                  <div class="col">
-                    <button class="btn btn-primary" type="submit">
-                      Search
-                    </button>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
     <footer class="site-footer">
       <div class="container">
         <div class="row">
@@ -602,11 +507,17 @@
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
-    <!-- DELETE - tooltip will be replaced with modal
+    <!-- Add code for JQuery Pause and Play -->
     <script>
       $(function () {
-        $('[data-toggle="tooltip"]').tooltip();
+        $('.carousel').carousel({ interval: 2000 });
+        $('.carouselPause').click(function () {
+          $('.carousel').carousel('pause');
+        });
+        $('.carouselPlay').click(function () {
+          $('.carousel').carousel('cycle');
+        });
       });
-    </script> -->
+    </script>
   </body>
 </html>
