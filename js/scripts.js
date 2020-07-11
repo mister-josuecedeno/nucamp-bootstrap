@@ -11,4 +11,13 @@ $(function () {
       $('#carouselButton').children('i').addClass('fa-pause');
     }
   });
+
+  // Task 2 - activate modal
+  $('#reserveButton').click(function () {
+    $('#reserveModal').modal('show');
+  });
+
+  $('#loginButton').click(function () {
+    $('#loginModal').modal('show');
+  });
 });
